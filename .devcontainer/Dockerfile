@@ -42,6 +42,8 @@ RUN apt-get update \
     && pip --disable-pip-version-check --no-cache-dir install scipy \
     && pip --disable-pip-version-check --no-cache-dir install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html \
     && pip --disable-pip-version-check --no-cache-dir install tensorflow \
+    && pip --disable-pip-version-check --no-cache-dir install tensorflow-gpu \
+    && pip --disable-pip-version-check --no-cache-dir install tflearn \
     #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
     && groupadd --gid $USER_GID $USERNAME \
